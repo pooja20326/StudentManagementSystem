@@ -1,26 +1,11 @@
 import java.util.*;
-class student 
-{
-    int id;
-    String name;
-    String Department;
-    student(int id,String name, String Department)
-    {
-        this.id=id;
-        this.name=name;
-        this.Department=Department;
-    }
-    void display()
-    {
-        System.out.println("ID" +id +"name"+ name+ "Department"+ Department);
-    }
-}
-public class StudentManagent
+
+ class StudentManagement1
 {
 public static void main(String[] args) 
 {
    Scanner sc=new Scanner(System.in);
-   ArrayList<student> students=new ArrayList<>(10);
+   ArrayList<Student> students=new ArrayList<>(10);
    //Simple login  System
    final String USERNAME="Admin";
    final String Password="123@#";
@@ -32,15 +17,17 @@ public static void main(String[] args)
     String user=sc.nextLine();
     System.out.println("Enter Password");
     String pass= sc.nextLine();
-    if(user.equals(USERNAME)&&pass.equals(Passwors));
+    
+    if (user.equals(USERNAME)&&pass.equals(Password))
     {
+            
     loggedin=true;
     System.out.println("Logged Successfully");
-}    
-        else
-    {
-          System.out.println("Invalid credential. Please try again!!!");
-    }
+    } 
+    else
+{
+System.out.println("Invalid credential. Please try again!!!");
+}
 }
      
 while(true)
@@ -59,17 +46,16 @@ while(true)
         System.out.println("Enter id");
         int id=sc.nextInt();
         sc.nextLine();
-        System.out.println("Enter name of the Stuident");
-        String name=sc.nextLine();
-        sc.nextLine();
+        System.out.println("Enter name of the Student");
+        String Name=sc.nextLine();
         System.out.println("Enter the Department of the student");
         String Dept=sc.nextLine();
-        student.add(new student(id, name, Dept));
+        students.add(new Student(id,Name,Dept));
         System.out.println("Students added Sucessfully");
         break;
         case 2:
         System.out.println("list of Student");
-        for (student s: students)
+        for (Student s: students)
         {
             s.display();
         }
@@ -78,7 +64,7 @@ while(true)
         System.out.println("Enter id to Search");
         int searchid=sc.nextInt();
         boolean found=false;
-        for(student s:students )
+        for(Student s:students )
         {
             if(s.id==searchid)
             {    s.display();
@@ -95,12 +81,33 @@ while(true)
         case 4:
         System.out.println("Exiting System......!!");
         return;
-    }
-    default:
+         default:
+    
     System.out.println("Invalid Option try Again....!!!!!!!!!");
+    }
+   
 }
 }
 }
+class Student 
+{
+    int id;
+    String name;
+    String Department;
+    Student(int id,String name, String Department)
+    {
+        this.id= id;
+        this.name= name;
+        this.Department= Department;
+    }
+    void display()
+    {
+        System.out.println("ID   " +id +" 4name "+name+"Department  "+Department);
+        
+      
+    }
+}
+    
 
 
     
