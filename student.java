@@ -102,7 +102,7 @@ class Student
     }
     void display()
     {
-        System.out.println("ID   " +id +" 4name "+name+"Department  "+Department);
+        System.out.println("ID  " +id +" name "+name+"Department  "+Department);
         
       
     }
